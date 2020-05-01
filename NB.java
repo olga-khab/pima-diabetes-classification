@@ -12,8 +12,8 @@ public class NB{
         class_no.add(row);
       }
     }
-    double p_yes = p_class_E(class_pdf(class_yes, testing));
-    double p_no = p_class_E(class_pdf(class_no, testing));
+    double p_yes = p_class_E(class_pdf(class_yes, testing))*class_yes.size()/(class_yes.size()+class_no.size());
+    double p_no = p_class_E(class_pdf(class_no, testing))*class_no.size()/(class_yes.size()+class_no.size());
     //System.out.println(p_yes);
     //System.out.println(p_no);
     if (p_yes>=p_no){
