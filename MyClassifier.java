@@ -41,7 +41,11 @@ public class MyClassifier {
         NB.NB(training, line);
       }
     }else{
-      //kNN.kNN(training, testing, Integer.parseInt(args[2].charAt(0)));
+      for (ArrayList<Double> line : testing){
+        // prints determined class
+        int k = Integer.parseInt(String.valueOf(args[2].charAt(0)));
+        kNN.kNN(training, line, k);
+      }
     }
   }
 }
